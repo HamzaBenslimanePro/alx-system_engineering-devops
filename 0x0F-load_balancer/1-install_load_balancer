@@ -1,4 +1,5 @@
-nstall load balancer
+#!/usr/bin/env bash
+# install load balancer
 
 
 echo -e "Updating and doing some minor checks...\n"
