@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+check_x_served_by_header() {
+    local url="$1"
+    local expected_value="$2"
+
+    # Send a HEAD request (-I) to the specified URL and capture the response headers
+    response_headers=$(curl -sI "$url")
+
+    # Check if the X-Served-By header is present in the response headers
+    if grep -q "^X-Served-By: $expected_value" <<< "$response_headers"; then
+        echo "The X-Served-By header is present with the expected value: $expected_value"
+    else
+        echo "The X-Served-By header is either not present or has a different value"
+    fi
+}
+
+# Usage example: Check the X-Served-By header for a specific URL
+check_x_served_by_header "http://your-domain.com" "web-01"
+
