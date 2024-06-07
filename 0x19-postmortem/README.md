@@ -58,6 +58,7 @@ This incident highlighted the critical importance of robust server and applicati
 
 ## Contact
 
-For more information, please contact the DevOps team.
+For more information, please contact the DevOps team:
+Benslimane Hamza <benslimanebiopro@gmail.com>
 
 
